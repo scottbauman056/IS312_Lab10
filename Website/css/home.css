@@ -1,0 +1,91 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+palette
+
+	darker teal #325455 /  50,84,85
+	teal #426e6f / 66,110,111
+	white #fbffff / 251,255,255
+	powder blue #dde9e9 / 221,233,233
+	overlay #CAD2D0 / 202,210,208
+*/
+
+body {
+	/*
+	background-color:rgba(50,84,85);
+	*/
+	background-color:rgba(25,42,43);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color:#dde9e9;
+}
+
+
+.container {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 100px minmax(auto, 600px) minmax(auto, 900px) auto 100px;
+	grid-gap:0px;
+	grid-template-areas:
+	'. . . . .'
+	'. . portrait . .'
+	'. . main . .'
+	'. . thetable . .'
+	'. . . . .';
+}
+
+.portrait {
+	grid-area: portrait;
+	background-color:rgba(66,110,111,.5);
+	backdrop-filter:blur(10px);
+	padding:30px;
+	justify-self:center;
+	align-self:end;
+	
+}
+
+
+.portrait>img {
+	height: minmax(auto, 150px);
+	width: auto;
+}
+
+.container>main {
+	grid-area: main;
+	width: minmax(auto, 900px);
+	padding:20px;
+	border-radius:15px;
+	border-style:solid;
+	border-color:#325455;
+	background: rgba(66,110,111,.75);
+	backdrop-filter:blur(10px);
+	font-size:1.35em;
+	justify-self:center;
+	align-self:center;
+}
+
+.thetable {
+	grid-area: thetable;
+	width: minmax(auto, 900px);
+	padding:20px;
+	border-radius:15px;
+	border-style:solid;
+	border-color:#325455;
+	background: rgba(66,110,111,.75);
+	backdrop-filter:blur(10px);
+	font-size:1.35em;
+	justify-self:center;
+	align-self:center;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
